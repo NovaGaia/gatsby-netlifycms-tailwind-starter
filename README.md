@@ -17,6 +17,13 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b13fc0e1-9fca-48c2-b078-12722c7e0357/deploy-status)](https://app.netlify.com/sites/infallible-varahamihira-058515/deploys)
 
+Enable Netlify CMS w/ Github
+
+1. in `./static/admin/config.yml` set your repo url. `organisation/repo_name
+2. Create a new OAuthApp at https://github.com/settings/developers, set Netlify site URL and copy **Client ID** and **Client Access**
+3. In Netlify, in **Site settings** enable **Identity** and **Git Gateaway**
+4. In **Site settings** > **AccessControl** in **OAuth** set **Github** w/ informations copied in step 2.
+
 An example website built using Gatsby v3, Netlify CMS and Tailwind CSS.
 
 It's a website of a fake urban gardening agency and comprises of a landing page, a project portfolio, about page with team members, and a contact form.
