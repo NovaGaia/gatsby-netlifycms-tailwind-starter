@@ -21,7 +21,7 @@
   Gatsby v3 - Netlify CMS - Tailwind CSS - Starter
 </h1>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b13fc0e1-9fca-48c2-b078-12722c7e0357/deploy-status)](https://app.netlify.com/sites/infallible-varahamihira-058515/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8a3b8c4d-3e0d-4a6e-8761-2fe0eaba8df9/deploy-status)](https://app.netlify.com/sites/rad-lamington-09d0a9/deploys)
 
 Enable Netlify CMS w/ Github
 
@@ -34,9 +34,9 @@ An example website built using Gatsby v3, Netlify CMS and Tailwind CSS.
 
 It's a website of a fake urban gardening agency and comprises of a landing page, a project portfolio, about page with team members, and a contact form.
 
- 👉 Check out the [demo site](https://infallible-varahamihira-058515.netlify.app/)!
+ 👉 Check out the [demo site](https://rad-lamington-09d0a9.netlify.app/)!
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/jimmybutton/gatsby-netlifycms-tailwind-starter" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/NovaGaia/gatsby-netlifycms-tailwind-starter" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
 
 ## 🦾 Technologies and Plugins
 
