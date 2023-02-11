@@ -55,7 +55,7 @@ It's a website of a fake urban gardening agency and comprises of a landing page,
 Start development environment with
 
 ```
-$ git clone https://github.com/jimmybutton/gatsby-netlifycms-tailwind-starter.git
+$ git clone https://github.com/NovaGaia/gatsby-netlifycms-tailwind-starter.git
 $ cd gatsby-netlifycms-tailwind-starter
 $ npm install
 $ gatsby develop
@@ -94,5 +94,6 @@ I've you find a solution that works, please let me know or submit a pull request
 
 ## 🛠 Todo
 
-- Google analytics? https://www.gatsbyjs.com/plugins/gatsby-plugin-gtag/?=google%20analytics#gatsby-plugin-gtag
-- gatsby plugin offline?
+- Gatsby V5
+- Change Layout mounting
+- Use Gatsby V4/V5 <Head> instead of Helmet
