@@ -12,9 +12,9 @@ office:
   tagline: Our Office
   location: London Spitalfield
   address: |-
-    UrbanGarden\
-    143 Fake Street\
-    London
+    7﻿ rue Pierre Brossolette\
+    9﻿4130 Nogent sur Marne\
+    France
   phone: |-
     Email: fake@urbangarden.com\
     Phone: 01234 567 891\
