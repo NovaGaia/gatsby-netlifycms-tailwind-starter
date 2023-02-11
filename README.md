@@ -4,7 +4,7 @@
     </a>
       &nbsp;
     <a href="https://www.netlifycms.org/" target="_blank">
-      <img alt="Netlify CMS" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Netlify_CMS_logo.svg" height="30" />
+      <img alt="Netlify CMS" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Netlify_CMS_logo.svg" height="40" />
     </a>
       &nbsp;
     <a href="https://tailwindcss.com/" target="_blank">
