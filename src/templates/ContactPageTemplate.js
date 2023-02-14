@@ -136,10 +136,10 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
         <SectionHeading>{office.location}</SectionHeading>
         <div className="mt-6 sm:flex sm:flex-row text-gray-500">
           <div className="sm:w-1/2">
-            <Mardown>{office.address.html}</Mardown>
+            <Mardown>{office.address}</Mardown>
           </div>
           <div className="mt-6 sm:mt-0 sm:w-1/2">
-            <Mardown>{office.phone.html}</Mardown>
+            <Mardown>{office.phone}</Mardown>
           </div>
         </div>
       </TextImageSplit>

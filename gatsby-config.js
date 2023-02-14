@@ -82,7 +82,6 @@ module.exports = {
         icon: `src/img/urbangarden-icon.png`,
       },
     },
-    'gatsby-transformer-remark-frontmatter',
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {

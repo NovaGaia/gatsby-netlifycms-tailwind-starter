@@ -87,22 +87,3 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
-
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = `
-    type MarkdownRemark implements Node {
-      frontmatter: Frontmatter
-    }
-
-    type Frontmatter {
-      office: Office
-    }
-
-    type Office {
-      address: String @md
-      phone: String @md
-    }
-  `
-  createTypes(typeDefs)
-}

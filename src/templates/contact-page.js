@@ -31,12 +31,8 @@ export const contactPageQuery = graphql`
         office {
           tagline
           location
-          address {
-            html: rawMarkdownBody
-          }
-          phone {
-            html: rawMarkdownBody
-          }
+          address
+          phone
           image {
             childImageSharp {
               gatsbyImageData(width: 640, placeholder: BLURRED)
