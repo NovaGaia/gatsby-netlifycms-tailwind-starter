@@ -18,7 +18,10 @@ const useSiteMetadata = () => {
               title
             }
             siteBaseline
-            copyright
+            copyright {
+              label
+              url
+            }
             showGitHubLink
             logoFooter {
               alt

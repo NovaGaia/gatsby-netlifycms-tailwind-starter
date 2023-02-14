@@ -79,13 +79,22 @@ const Footer = ({ siteBaseline, logo, copyright, navigation }) => {
           </div>
         </div>
 
-        <hr className="h-px my-6 bg-gray-300 border-none dark:bg-gray-700" />
-
-        <div>
-          <p className="text-center text-gray-800 dark:text-white">
-            {copyright}
-          </p>
-        </div>
+        {copyright && (
+          <>
+            <hr className="h-px my-6 bg-gray-300 border-none dark:bg-gray-700" />
+            <div className="text-center">
+              <a
+                href={copyright.url}
+                title={copyright.title}
+                target={`_blank`}
+                rel={`noreferer`}
+                className="text-gray-800 dark:text-white hover:underline"
+              >
+                {copyright.label}
+              </a>
+            </div>
+          </>
+        )}
       </div>
     </footer>
   )

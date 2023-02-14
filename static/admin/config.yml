@@ -213,7 +213,17 @@ collections:
                 ],
             }
           - { label: 'Site baseline (Footer)', name: 'siteBaseline', widget: 'text' }
-          - { label: 'Site copyright', name: 'copyright', widget: 'string', hint: '© NovaGaïa 2020 - All rights reserved' }
+          - {
+              label: Site copyright,
+              name: copyright,
+              widget: object,
+              fields:
+                [
+                  { label: 'Text', name: 'label', widget: 'string', hint: '© NovaGaïa 2020 - All rights reserved' },
+                  { label: 'Title', name: 'title', widget: 'string', hint: 'Consulter le site NovaGaïa' },
+                  { label: 'URL', name: 'url', widget: 'string', hint: 'https://novagaia.fr' },
+                ],
+            }
       - file: 'src/pages/site/navigations.md'
         label: 'Navigations'
         name: 'navigations'

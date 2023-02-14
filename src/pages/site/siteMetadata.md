@@ -15,6 +15,10 @@ logoFooter:
   image: /img/logoipsum-285.svg
   width: 40px
   height: 40px
-siteBaseline: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nisi! Id.
-copyright: © NovaGaïa 2020 - All rights reserved
+siteBaseline: "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Reiciendis, nisi! Id. "
+copyright:
+  label: © NovaGaïa 2023 - All rights reserved
+  url: https://novagaia.fr
+  title: Consulter le site NovaGaïa
 ---
