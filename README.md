@@ -30,11 +30,14 @@ Enable Netlify CMS w/ Github
 3. In Netlify, in **Site settings** enable **Identity** and **Git Gateaway**
 4. In **Site settings** > **AccessControl** in **OAuth** set **Github** w/ informations copied in step 2.
 
+NPM --force
+npm i gatsby-remark-relative-images gatsby-transformer-remark-frontmatter --force
+
 An example website built using Gatsby v3, Netlify CMS and Tailwind CSS.
 
 It's a website of a fake urban gardening agency and comprises of a landing page, a project portfolio, about page with team members, and a contact form.
 
- 👉 Check out the [demo site](https://rad-lamington-09d0a9.netlify.app/)!
+👉 Check out the [demo site](https://rad-lamington-09d0a9.netlify.app/)!
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/NovaGaia/gatsby-netlifycms-tailwind-starter" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
 
