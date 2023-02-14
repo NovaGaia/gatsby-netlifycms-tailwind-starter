@@ -7,6 +7,7 @@ module.exports = {
     description:
       'Transforming and enriching our urban environments with green living spaces',
     siteUrl: 'https://objective-thompson-fe2703.netlify.app',
+    repoUrl: `https://github.com/NovaGaia/gatsby-netlifycms-tailwind-starter`,
   },
   plugins: [
     {

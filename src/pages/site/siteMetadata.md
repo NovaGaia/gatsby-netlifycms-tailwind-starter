@@ -1,6 +1,7 @@
 ---
 title: UrbanGarden
 description: Transforming and enriching our urban environments with green living spaces
+showGitHubLink: false
 seoPrincipal:
   title: UrbanGarden
   description: Transforming and enriching our urban environments with green living spaces

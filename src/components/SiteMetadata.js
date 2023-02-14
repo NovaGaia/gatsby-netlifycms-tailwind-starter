@@ -1,19 +1,52 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 const useSiteMetadata = () => {
-  const { site } = useStaticQuery(
+  const { siteMetadata, gatsbyConf } = useStaticQuery(
     graphql`
       query SITE_METADATA_QUERY {
-        site {
+        gatsbyConf: site {
           siteMetadata {
-            title
-            description
+            repoUrl
+          }
+        }
+        siteMetadata: markdownRemark(
+          fields: { slug: { regex: "/siteMetadata/" } }
+        ) {
+          frontmatter {
+            seoPrincipal {
+              description
+              title
+            }
+            siteBaseline
+            copyright
+            showGitHubLink
+            logoFooter {
+              alt
+              height
+              width
+              image {
+                childImageSharp {
+                  gatsbyImageData(height: 40)
+                }
+              }
+            }
+            logoHeader {
+              alt
+              height
+              width
+              image {
+                childImageSharp {
+                  gatsbyImageData(height: 40)
+                }
+              }
+            }
           }
         }
       }
     `
   )
-  return site.siteMetadata
+  siteMetadata.frontmatter['repoURL'] = gatsbyConf?.siteMetadata?.repoUrl
+  return siteMetadata.frontmatter
 }
 
 export default useSiteMetadata

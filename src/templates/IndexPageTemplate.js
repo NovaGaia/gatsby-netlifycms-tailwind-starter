@@ -22,7 +22,8 @@ const IndexPageTemplate = ({
             <svg
               className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-green-700 transform translate-x-1/2"
               fill="currentColor"
-              width={`192px`} height={`100%`}
+              width={`192px`}
+              height={`100%`}
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
               aria-hidden="true"

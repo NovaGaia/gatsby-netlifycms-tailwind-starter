@@ -177,6 +177,7 @@ collections:
         label: 'Site configuration'
         name: 'configuration'
         fields:
+          - { label: Display GitHub Repo Link, name: showGitHubLink, widget: boolean, required: true}
           - {
               label: SEO,
               name: seoPrincipal,

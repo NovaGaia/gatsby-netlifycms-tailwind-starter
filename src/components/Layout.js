@@ -1,26 +1,43 @@
 import * as React from 'react'
+
+import Footer from './Footer'
 import { Helmet } from 'react-helmet'
 import Navbar from './Navbar'
-import Footer from './Footer'
-import useSiteMetadata from './SiteMetadata'
 import { useScroll } from '../hooks/useScroll'
+import useSiteMetadata from './SiteMetadata'
+import useSiteNavigation from './SiteNavigation'
 
 const { NODE_ENV } = process.env
 
 const Layout = ({ children }) => {
   // set global title and description on global layout, can be overwritten on a per-page basis with MyHelmet
-  const { title, description } = useSiteMetadata()
+  const {
+    seoPrincipal: { title, description },
+    siteBaseline,
+    logoFooter,
+    logoHeader,
+    repoURL,
+    showGitHubLink,
+    copyright,
+  } = useSiteMetadata()
+  const { navPrimary, navSecondary } = useSiteNavigation()
   const { scrollY, scrollDirection } = useScroll()
 
   return (
     <div className="bg-white">
       <Helmet>
         <html lang="en" />
-        <title>{title} | UrbanGarden</title>
+        <title>
+          {title} | {title}
+        </title>
         <meta name="description" content={description} />
       </Helmet>
       <div className="flex flex-col h-screen justify-between">
         <Navbar
+          logo={logoHeader}
+          repoURL={repoURL}
+          navigation={navPrimary}
+          showGitHubLink={showGitHubLink}
           className={`transition transform duration-300 ease-in-out ${
             scrollDirection === 'down' || scrollY < 200
               ? ''
@@ -29,7 +46,12 @@ const Layout = ({ children }) => {
         />
         {/* Navbar height will be h-12 sm:h-14 md:h-18 */}
         <main className="mb-auto">{children}</main>
-        <Footer />
+        <Footer
+          navigation={navSecondary}
+          siteBaseline={siteBaseline}
+          logo={logoFooter}
+          copyright={copyright}
+        />
       </div>
 
       {/* small badge to display current break-point (only in dev mode) */}

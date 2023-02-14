@@ -1,8 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const Footer = () => {
+import { Link } from 'gatsby'
+import React from 'react'
+
+const Footer = ({ siteBaseline, logo, copyright, navigation }) => {
+  console.log(`navigation`, navigation)
   return (
     <footer className="bg-gray-100">
       <div className="max-w-7xl px-4 py-4 mx-auto sm:px-6 lg:px-8">
@@ -10,119 +12,58 @@ const Footer = () => {
           <div className="w-full -mx-4 sm:-mx-6 lg:-mx-8 lg:w-2/5">
             <div className="px-4 sm:px-6 lg:px-8">
               <Link className="flex items-center gap-1" to="/">
-                <StaticImage
-                  src="../img/urbangarden-icon.png"
-                  alt="UrbanGarden icon"
-                  layout="fixed"
-                  width={40}
-                  height={40}
-                  backgroundColor="transparent"
-                  placeholder="blurred"
-                />
-                <div className="text-xl font-bold tracking-wide">
-                  <span className="text-gray-800 font-semibold">Urban</span>
-                  <span className="text-green-700">Garden</span>
-                </div>
+                {logo && (
+                  <GatsbyImage alt={logo?.alt} image={getImage(logo?.image)} />
+                )}
               </Link>
 
               <p className="max-w-md mt-2 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis, nisi! Id.
+                {siteBaseline}
               </p>
             </div>
           </div>
 
           <div className="mt-6 lg:mt-0 lg:flex-1">
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
-              <div>
-                <h3 className="text-gray-700 uppercase dark:text-white">
-                  About
-                </h3>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                >
-                  Company
-                </Link>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                >
-                  Community
-                </Link>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                >
-                  Careers
-                </Link>
-              </div>
-
-              <div>
-                <h3 className="text-gray-700 uppercase dark:text-white">
-                  Blog
-                </h3>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                >
-                  Tec
-                </Link>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                >
-                  Music
-                </Link>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                >
-                  Videos
-                </Link>
-              </div>
-
-              <div>
-                <h3 className="text-gray-700 uppercase dark:text-white">
-                  Products
-                </h3>
-                <a
-                  href="https://www.gatsbyjs.com/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Gatsby
-                </a>
-                <a
-                  href="https://www.netlifycms.org/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Netlify CMS
-                </a>
-                <a
-                  href="https://tailwindcss.com/"
-                  className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Tailwind CSS
-                </a>
-              </div>
-
-              <div>
-                <h3 className="text-gray-700 uppercase dark:text-white">
-                  Contact
-                </h3>
-                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                  +1 526 654 8965
-                </span>
-                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                  example@email.com
-                </span>
-              </div>
+              {navigation?.map((column, key) => {
+                return (
+                  <div>
+                    <h3
+                      className="text-gray-700 uppercase dark:text-white"
+                      key={key}
+                    >
+                      {column.name}
+                    </h3>
+                    {column?.links?.map((link, subKey) => {
+                      if (link?.url.startsWith('http')) {
+                        return (
+                          <a
+                            href={link?.url}
+                            title={link.title}
+                            target={`_blank`}
+                            rel={`noreferer`}
+                            key={subKey}
+                            className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                          >
+                            {link.name}
+                          </a>
+                        )
+                      } else {
+                        return (
+                          <Link
+                            to={link.url}
+                            title={link.title}
+                            key={subKey}
+                            className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                          >
+                            {link.name}
+                          </Link>
+                        )
+                      }
+                    })}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -131,7 +72,7 @@ const Footer = () => {
 
         <div>
           <p className="text-center text-gray-800 dark:text-white">
-            © Brand 2020 - All rights reserved
+            {copyright}
           </p>
         </div>
       </div>
