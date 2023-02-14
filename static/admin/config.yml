@@ -12,7 +12,7 @@ collections:
   - name: "projects"
     label: "Projects"
     folder: "src/pages/projects"
-    filter: {field: "templateKey", value: "project-page"}
+    filter: { field: "templateKey", value: "project-page" }
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
@@ -170,3 +170,12 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
+  - name: "site"
+    label: "Site configuration"
+    files:
+      - file: "src/pages/site/index.md"
+        label: "Site configuration"
+        name: "index"
+        fields:
+          - { label: "Site title", name: "title", widget: "string" }
+          - { label: "Site Description", name: "description", widget: "string" }
