@@ -12,9 +12,20 @@ const Footer = ({ siteBaseline, logo, copyright, navigation }) => {
           <div className="w-full -mx-4 sm:-mx-6 lg:-mx-8 lg:w-2/5">
             <div className="px-4 sm:px-6 lg:px-8">
               <Link className="flex items-center gap-1" to="/">
-                {logo && (
-                  <GatsbyImage alt={logo?.alt} image={getImage(logo?.image)} />
-                )}
+                {logo &&
+                  (getImage(logo?.image) ? (
+                    <GatsbyImage
+                      alt={logo?.alt}
+                      className="h-8 sm:h-10"
+                      image={getImage(logo?.image)}
+                    />
+                  ) : (
+                    <img
+                      src={logo?.image?.publicURL}
+                      alt={logo?.alt}
+                      className="h-8 sm:h-10"
+                    />
+                  ))}
               </Link>
 
               <p className="max-w-md mt-2 text-gray-600 dark:text-gray-400">

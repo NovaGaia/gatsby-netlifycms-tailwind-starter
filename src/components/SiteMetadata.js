@@ -25,6 +25,7 @@ const useSiteMetadata = () => {
               height
               width
               image {
+                publicURL
                 childImageSharp {
                   gatsbyImageData(height: 40)
                 }
@@ -35,6 +36,7 @@ const useSiteMetadata = () => {
               height
               width
               image {
+                publicURL
                 childImageSharp {
                   gatsbyImageData(height: 40)
                 }

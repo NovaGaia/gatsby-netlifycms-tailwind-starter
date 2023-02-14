@@ -7,12 +7,12 @@ seoPrincipal:
   description: Transforming and enriching our urban environments with green living spaces
 logoHeader:
   alt: Logo top
-  image: /img/urbangarden-icon.png
+  image: /img/logoipsum-285.svg
   width: 40px
   height: 40px
 logoFooter:
   alt: Logo secondary
-  image: /img/urbangarden-icon.png
+  image: /img/logoipsum-285.svg
   width: 40px
   height: 40px
 siteBaseline: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nisi! Id.

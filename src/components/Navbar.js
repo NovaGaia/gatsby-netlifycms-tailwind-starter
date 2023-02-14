@@ -53,13 +53,20 @@ const Navbar = ({ className, navigation, logo, repoURL, showGitHubLink }) => {
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between py-2">
           <Link className="flex items-center gap-1" to="/">
-            {logo && (
-              <GatsbyImage
-                alt={logo?.alt}
-                className="h-8 sm:h-10"
-                image={getImage(logo?.image)}
-              />
-            )}
+            {logo &&
+              (getImage(logo?.image) ? (
+                <GatsbyImage
+                  alt={logo?.alt}
+                  className="h-8 sm:h-10"
+                  image={getImage(logo?.image)}
+                />
+              ) : (
+                <img
+                  src={logo?.image?.publicURL}
+                  alt={logo?.alt}
+                  className="h-8 sm:h-10"
+                />
+              ))}
           </Link>
 
           {/* Mobile menu button */}
