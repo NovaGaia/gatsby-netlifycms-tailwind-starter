@@ -1,5 +1,5 @@
-import React from "react"
 import AboutPageTemplate from "../../templates/AboutPageTemplate"
+import React from "react"
 const marked = require("marked")
 
 const AboutPagePreview = ({ entry, getAsset }) => {
@@ -15,14 +15,14 @@ const AboutPagePreview = ({ entry, getAsset }) => {
   })
 
   // render markdown for cms preview
-  const html = marked(data.body)
+  const html = marked.parse(data.body)
 
   if (data) {
     return (
       <AboutPageTemplate
         heading={data.heading}
         subheading={data.subheading}
-        html={html}
+        html={data.body}
         team={team}
       />
     )

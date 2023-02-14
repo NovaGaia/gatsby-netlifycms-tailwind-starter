@@ -1,5 +1,5 @@
-import React from "react"
 import ContactPageTemplate from "../../templates/ContactPageTemplate"
+import React from "react"
 const marked = require("marked")
 
 const ContactPagePreview = ({ entry, getAsset }) => {
@@ -15,9 +15,9 @@ const ContactPagePreview = ({ entry, getAsset }) => {
     ...data.office,
     image: getAsset(data.office.image),
     address: {
-      html: marked(data.office.address),
+      html: marked.parse(data.office.address),
     },
-    phone: { html: marked(data.office.phone) },
+    phone: { html: marked.parse(data.office.phone) },
   }
 
   if (data) {
