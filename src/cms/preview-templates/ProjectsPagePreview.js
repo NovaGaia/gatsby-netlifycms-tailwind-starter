@@ -1,8 +1,8 @@
-import React from "react"
-import ProjectsPageTemplate from "../../templates/ProjectsPageTemplate"
+import React from 'react'
+import ProjectsPageTemplate from '../../templates/ProjectsPageTemplate'
 
 const ProjectsPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(["data"]).toJS()
+  const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (

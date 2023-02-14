@@ -1,9 +1,8 @@
-import ContactPageTemplate from "../../templates/ContactPageTemplate"
-import React from "react"
-const marked = require("marked")
+import ContactPageTemplate from '../../templates/ContactPageTemplate'
+import React from 'react'
 
 const ContactPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(["data"]).toJS()
+  const data = entry.getIn(['data']).toJS()
 
   // get image assets and transform markdown
   const contactform = {
@@ -15,9 +14,9 @@ const ContactPagePreview = ({ entry, getAsset }) => {
     ...data.office,
     image: getAsset(data.office.image),
     address: {
-      html: marked.parse(data.office.address),
+      html: data.office.address,
     },
-    phone: { html: marked.parse(data.office.phone) },
+    phone: { html: data.office.phone },
   }
 
   if (data) {

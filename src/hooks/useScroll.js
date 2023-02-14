@@ -9,8 +9,8 @@
  *    const { scrollX, scrollY, scrollDirection } = useScroll();
  */
 
-import { useState, useEffect } from "react"
-import { globalHistory } from "@reach/router"
+import { useState, useEffect } from 'react'
+import { globalHistory } from '@reach/router'
 
 export function useScroll() {
   // storing this to get the scroll direction
@@ -26,18 +26,18 @@ export function useScroll() {
     const bodyOffset = document.body.getBoundingClientRect()
     setScrollY(-bodyOffset.top)
     setScrollX(bodyOffset.left)
-    setScrollDirection(lastScrollTop > -bodyOffset.top ? "down" : "up")
+    setScrollDirection(lastScrollTop > -bodyOffset.top ? 'down' : 'up')
     setLastScrollTop(-bodyOffset.top)
   }
 
   useEffect(() => {
-    if (typeof window === "undefined" || !window.document) {
+    if (typeof window === 'undefined' || !window.document) {
       // required for static rendering, as window is not defined
       return
     }
-    window.addEventListener("scroll", listener)
+    window.addEventListener('scroll', listener)
     return () => {
-      window.removeEventListener("scroll", listener)
+      window.removeEventListener('scroll', listener)
     }
   })
 
@@ -45,7 +45,7 @@ export function useScroll() {
   // see https://stackoverflow.com/a/61664193/13975292
   useEffect(() => {
     return globalHistory.listen(({ action }) => {
-      if (action === "PUSH") {
+      if (action === 'PUSH') {
         setScrollY(0)
       }
     })

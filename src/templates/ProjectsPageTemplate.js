@@ -1,6 +1,6 @@
-import React from "react"
-import Header from "../components/Header"
-import { Container, CardSet } from "../components/Sections"
+import React from 'react'
+import Header from '../components/Header'
+import { Container, CardSet } from '../components/Sections'
 
 function ProjectsPageTemplate({ heading, subheading, posts = [] }) {
   return (

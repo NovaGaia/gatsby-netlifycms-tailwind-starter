@@ -1,29 +1,29 @@
-import React from 'react'
-import Header from "../components/Header"
-import { TextImageSplit, SectionHeading } from "../components/Sections"
+import { SectionHeading, TextImageSplit } from '../components/Sections'
 
-function ContactPageTemplate({
-  heading,
-  subheading,
-  contactform,
-  office
-}) {
+import Header from '../components/Header'
+import Mardown from 'react-markdown'
+import React from 'react'
+
+function ContactPageTemplate({ heading, subheading, contactform, office }) {
   return (
     <div>
       <Header heading={heading} subheading={subheading} />
 
       <TextImageSplit image={contactform.image}>
         <SectionHeading>{contactform.heading}</SectionHeading>
-        <p className="mt-6 text-gray-500 text-lg">
-          {contactform.description}
-        </p>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <p className="mt-6 text-gray-500 text-lg">{contactform.description}</p>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
           <input type="hidden" name="form-name" value="contact" />
           <p class="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
-          </p>  
+          </p>
           <div className="mt-6">
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
@@ -111,7 +111,7 @@ function ContactPageTemplate({
                     name="message"
                     rows={3}
                     className="shadow-sm focus:ring-green-500 focus:border-green-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
-                    defaultValue={""}
+                    defaultValue={''}
                   />
                 </div>
               </div>
@@ -135,14 +135,12 @@ function ContactPageTemplate({
         </p>
         <SectionHeading>{office.location}</SectionHeading>
         <div className="mt-6 sm:flex sm:flex-row text-gray-500">
-          <div
-            className="sm:w-1/2"
-            dangerouslySetInnerHTML={{ __html: office.address.html }}
-          />
-          <div
-            className="mt-6 sm:mt-0 sm:w-1/2"
-            dangerouslySetInnerHTML={{ __html: office.phone.html }}
-          />
+          <div className="sm:w-1/2">
+            <Mardown>{office.address.html}</Mardown>
+          </div>
+          <div className="mt-6 sm:mt-0 sm:w-1/2">
+            <Mardown>{office.phone.html}</Mardown>
+          </div>
         </div>
       </TextImageSplit>
     </div>

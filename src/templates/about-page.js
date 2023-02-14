@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import MyHelmet from "../components/MyHelmet"
-import AboutPageTemplate from "./AboutPageTemplate"
+import AboutPageTemplate from './AboutPageTemplate'
+import MyHelmet from '../components/MyHelmet'
+import React from 'react'
+import { graphql } from 'gatsby'
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
@@ -25,7 +25,7 @@ export default AboutPage
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
+      html: rawMarkdownBody
       frontmatter {
         title
         heading

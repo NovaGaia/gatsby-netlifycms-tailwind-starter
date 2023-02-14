@@ -1,9 +1,8 @@
-import ProjectPageTemplate from "../../templates/ProjectPageTemplate"
-import React from "react"
-const marked = require("marked")
+import ProjectPageTemplate from '../../templates/ProjectPageTemplate'
+import React from 'react'
 
 const ProjectPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(["data"]).toJS()
+  const data = entry.getIn(['data']).toJS()
 
   if (data) {
     // get image assets and transform markdown
@@ -13,22 +12,20 @@ const ProjectPagePreview = ({ entry, getAsset }) => {
             ...data.featuredimage,
             image: getAsset(data.featuredimage.image),
           }
-        : { image: null, alt: "" }
-
-    const body = data.body ? marked.parse(data.body) : null
+        : { image: null, alt: '' }
 
     return (
       <ProjectPageTemplate
         location={data.location}
         title={data.title}
-        date={new Date(data.date).toLocaleDateString("en-GB", {
-          weekday: "short",
-          year: "numeric",
-          month: "short",
-          day: "numeric",
+        date={new Date(data.date).toLocaleDateString('en-GB', {
+          weekday: 'short',
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
         })}
         image={image}
-        body={body}
+        body={data.body}
       />
     )
   } else {

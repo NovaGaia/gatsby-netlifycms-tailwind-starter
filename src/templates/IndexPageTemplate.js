@@ -1,9 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import { SectionHeading, TextImageSplit } from "../components/Sections"
-import { PrimaryButton, SecondaryButton } from "../components/Buttons"
-import { Container, CardSet } from "../components/Sections"
-import Image from "../components/Image"
+import { CardSet, Container } from '../components/Sections'
+import { PrimaryButton, SecondaryButton } from '../components/Buttons'
+import { SectionHeading, TextImageSplit } from '../components/Sections'
+
+import Image from '../components/Image'
+import { Link } from 'gatsby'
+import React from 'react'
 
 const IndexPageTemplate = ({
   heading,
@@ -21,6 +22,7 @@ const IndexPageTemplate = ({
             <svg
               className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-green-700 transform translate-x-1/2"
               fill="currentColor"
+              width={`192px`} height={`100%`}
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
               aria-hidden="true"
@@ -57,7 +59,10 @@ const IndexPageTemplate = ({
       <Container>
         <div className="flex justify-between items-baseline">
           <SectionHeading>Our projects from all over the world</SectionHeading>
-          <Link className="text-green-700 underline hover:text-green-800" to="/projects">
+          <Link
+            className="text-green-700 underline hover:text-green-800"
+            to="/projects"
+          >
             View all
           </Link>
         </div>

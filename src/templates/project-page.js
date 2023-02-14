@@ -1,9 +1,9 @@
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from 'gatsby'
 
-import { Container } from "../components/Sections"
-import MyHelmet from "../components/MyHelmet"
-import ProjectPageTemplate from "./ProjectPageTemplate"
-import React from "react"
+import { Container } from '../components/Sections'
+import MyHelmet from '../components/MyHelmet'
+import ProjectPageTemplate from './ProjectPageTemplate'
+import React from 'react'
 
 const ProjectPage = ({ data, pageContext }) => {
   const { next, previous } = pageContext
@@ -24,12 +24,12 @@ const ProjectPage = ({ data, pageContext }) => {
       {/* Links to previous and next project */}
       <Container>
         <div className="sm:flex sm:justify-between sm:items-center sm:gap-4 border-t py-4">
-          {previous && previous.frontmatter.templateKey === "project-page" ? (
+          {previous && previous.frontmatter.templateKey === 'project-page' ? (
             <Link to={previous.fields.slug} className="group">
               <div className="flex items-center gap-x-2 text-gray-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 20 20"
                   fill="currentColor"
                   className="w-5 h-5"
                 >
@@ -51,14 +51,14 @@ const ProjectPage = ({ data, pageContext }) => {
           ) : (
             <div />
           )}
-          {next && next.frontmatter.templateKey === "project-page" ? (
+          {next && next.frontmatter.templateKey === 'project-page' ? (
             <div className="mt-6 sm:mt-0">
               <Link to={next.fields.slug} className="group sm:text-right">
                 <div className="flex items-center gap-x-2 text-gray-500 sm:justify-end">
                   Previous
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 20 20"
                     fill="currentColor"
                     className="w-5 h-5"
                   >
@@ -91,7 +91,7 @@ export default ProjectPage
 export const projectQuery = graphql`
   query ProjectPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
+      html: rawMarkdownBody
       excerpt
       frontmatter {
         title

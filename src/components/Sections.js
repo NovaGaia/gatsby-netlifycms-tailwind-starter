@@ -1,5 +1,5 @@
-import React from "react"
-import Card from "./Card"
+import React from 'react'
+import Card from './Card'
 import Image from './Image'
 
 /**
@@ -33,7 +33,11 @@ export const TextImageSplit = ({ image, children, imageLeft = false }) => {
   return (
     <Container>
       <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-10">
-        <div className={`w-full pt-8 pb-12 lg:w-1/2 ${imageLeft ? "lg:order-last" : ""}`}>
+        <div
+          className={`w-full pt-8 pb-12 lg:w-1/2 ${
+            imageLeft ? 'lg:order-last' : ''
+          }`}
+        >
           <div className="text-center max-w-lg mx-auto lg:text-left lg:max-w-7xl">
             {children}
           </div>
@@ -43,7 +47,7 @@ export const TextImageSplit = ({ image, children, imageLeft = false }) => {
           <Image
             className="rounded-md h-full w-full object-cover"
             image={image.image || image}
-            alt={image.alt || ""}
+            alt={image.alt || ''}
           />
         </div>
       </div>

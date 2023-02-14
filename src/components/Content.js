@@ -1,5 +1,5 @@
-import Markdown from "react-markdown"
-import React from "react"
+import Markdown from 'react-markdown'
+import React from 'react'
 
 /**
  * Section for markdown content (prose)

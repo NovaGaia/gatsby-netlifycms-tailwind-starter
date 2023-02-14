@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import MyHelmet from "../components/MyHelmet"
-import ProjectsPageTemplate from "./ProjectsPageTemplate"
+import MyHelmet from '../components/MyHelmet'
+import ProjectsPageTemplate from './ProjectsPageTemplate'
+import React from 'react'
+import { graphql } from 'gatsby'
 
 const ProjectsPage = ({ data }) => {
   const { frontmatter: fm } = data.markdownRemark
@@ -9,7 +9,7 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <>
-    <MyHelmet title={fm.title} description={fm.subheading} />
+      <MyHelmet title={fm.title} description={fm.subheading} />
       <ProjectsPageTemplate
         heading={fm.heading}
         subheading={fm.subheading}
@@ -24,7 +24,7 @@ export default ProjectsPage
 export const projectsPageQuery = graphql`
   query ProjectsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
+      html: rawMarkdownBody
       frontmatter {
         title
         heading
@@ -66,4 +66,3 @@ export const projectsPageQuery = graphql`
     }
   }
 `
-

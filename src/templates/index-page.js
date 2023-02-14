@@ -1,8 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import MyHelmet from "../components/MyHelmet"
-
-import IndexPageTemplate from "./IndexPageTemplate"
+import IndexPageTemplate from './IndexPageTemplate'
+import MyHelmet from '../components/MyHelmet'
+import React from 'react'
+import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => {
   const { frontmatter: fm } = data.markdownRemark
@@ -12,10 +11,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <MyHelmet
-        title={fm.title}
-        description={fm.subheading}
-      />
+      <MyHelmet title={fm.title} description={fm.subheading} />
       <IndexPageTemplate
         heading={fm.heading}
         subheading={fm.subheading}
@@ -32,7 +28,7 @@ export default IndexPage
 export const indexPageQuery = graphql`
   query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
+      html: rawMarkdownBody
       frontmatter {
         title
         image {

@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql } from "gatsby"
-import MyHelmet from "../components/MyHelmet"
-import ContactPageTemplate from "./ContactPageTemplate"
+import ContactPageTemplate from './ContactPageTemplate'
+import MyHelmet from '../components/MyHelmet'
+import React from 'react'
+import { graphql } from 'gatsby'
 
 function ContactPage({ data }) {
   const fm = data.markdownRemark.frontmatter
@@ -32,10 +32,10 @@ export const contactPageQuery = graphql`
           tagline
           location
           address {
-            html
+            html: rawMarkdownBody
           }
           phone {
-            html
+            html: rawMarkdownBody
           }
           image {
             childImageSharp {

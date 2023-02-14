@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "cms",
+      "problemMatcher": [],
+      "label": "npm: cms",
+      "detail": "npx netlify-cms-proxy-server"
+    }
+  ]
+}

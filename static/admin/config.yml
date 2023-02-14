@@ -9,28 +9,28 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "src/pages/projects"
-    filter: { field: "templateKey", value: "project-page" }
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'src/pages/projects'
+    filter: { field: 'templateKey', value: 'project-page' }
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} {{year}}-{{month}}-{{day}} {{fields.featured}}'
     fields:
       - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "project-page",
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'project-page',
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured", name: "featured", widget: boolean }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured', name: 'featured', widget: boolean }
       # - {label: "Description", name: "description", widget: "text"}
       # - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {
-          label: "Featured Image",
-          name: "featuredimage",
+          label: 'Featured Image',
+          name: 'featuredimage',
           widget: object,
           fields:
             [
@@ -39,21 +39,21 @@ collections:
             ],
         }
       - { label: Location, name: location, widget: string }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
       # - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: 'src/pages/index.md'
+        label: 'Landing Page'
+        name: 'index'
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "index-page",
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'index-page',
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
@@ -65,8 +65,8 @@ collections:
           # - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           # - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
           - {
-              label: "About",
-              name: "about",
+              label: 'About',
+              name: 'about',
               widget: object,
               fields:
                 [
@@ -94,33 +94,33 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/projects/index.md"
-        label: "Projects"
-        name: "projects-index"
+      - file: 'src/pages/projects/index.md'
+        label: 'Projects'
+        name: 'projects-index'
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "projects-page",
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'projects-page',
             }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: 'src/pages/about/index.md'
+        label: 'About'
+        name: 'about'
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'about-page',
             }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
           - {
               label: Team,
               label_singular: Member,
@@ -133,17 +133,17 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
-      - file: "src/pages/contact/index.md"
-        label: "Contact"
-        name: "contact"
+      - file: 'src/pages/contact/index.md'
+        label: 'Contact'
+        name: 'contact'
         fields:
           - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "contact-page",
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'contact-page',
             }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
@@ -170,12 +170,83 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
-  - name: "site"
-    label: "Site configuration"
+  - name: 'site'
+    label: 'Site configuration'
     files:
-      - file: "src/pages/site/index.md"
-        label: "Site configuration"
-        name: "index"
+      - file: 'src/pages/site/siteMetadata.md'
+        label: 'Site configuration'
+        name: 'configuration'
         fields:
-          - { label: "Site title", name: "title", widget: "string" }
-          - { label: "Site Description", name: "description", widget: "string" }
+          - {
+              label: SEO,
+              name: seoPrincipal,
+              widget: object,
+              fields:
+                [
+                  { label: 'Site title', name: 'title', widget: 'string' },
+                  { label: 'Site Description', name: 'description', widget: 'text' },
+                ],
+            }
+          - {
+              label: Logo Header,
+              name: logoHeader,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Alt, name: alt, widget: string },
+                  { label: Width, name: width, widget: string },
+                  { label: Height, name: height, widget: string },
+                ],
+            }
+          - {
+              label: Logo Footer,
+              name: logoFooter,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image, required: false },
+                  { label: Alt, name: alt, widget: string, required: false },
+                  { label: Width, name: width, widget: string, required: false },
+                  { label: Height, name: height, widget: string, required: false },
+                ],
+            }
+          - { label: 'Site baseline (Footer)', name: 'siteBaseline', widget: 'text' }
+          - { label: 'Site copyright', name: 'copyright', widget: 'string', hint: '© NovaGaïa 2020 - All rights reserved' }
+      - file: 'src/pages/site/navigations.md'
+        label: 'Navigations'
+        name: 'navigations'
+        fields:
+          - {
+              label: Primary Navigation (Header),
+              label_singular: link,
+              name: navPrimary,
+              widget: list,
+              fields:
+                [
+                  { label: Label, name: name, widget: string },
+                  { label: Title, name: title, widget: string },
+                  { label: URL, name: url, widget: string },
+                ],
+            }
+          - {
+              label: Secondary Navigation (Footer),
+              label_singular: column,
+              name: navSecondary,
+              widget: list,
+              fields:
+                [{ label: Label, name: name, widget: string },
+                {
+                  label: Links,
+                  label_singular: link,
+                  name: links,
+                  widget: list,
+                  fields:
+                    
+                    [
+                      { label: Label, name: name, widget: string },
+                      { label: Title, name: title, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }]
+            }

@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require('path')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
@@ -56,19 +56,20 @@ exports.createPages = ({ graphql, actions }) => {
 
         edges.forEach(({ node, next, previous }) => {
           const id = node.id
-          createPage({
-            path: node.fields.slug,
-            // tags: edge.node.frontmatter.tags,
-            component: path.resolve(
-              `src/templates/${String(node.frontmatter.templateKey)}.js`
-            ),
-            // additional data can be passed via context
-            context: {
-              id,
-              next,
-              previous,
-            },
-          })
+          if (node.frontmatter?.templateKey !== null)
+            createPage({
+              path: node.fields.slug,
+              // tags: edge.node.frontmatter.tags,
+              component: path.resolve(
+                `src/templates/${String(node.frontmatter.templateKey)}.js`
+              ),
+              // additional data can be passed via context
+              context: {
+                id,
+                next,
+                previous,
+              },
+            })
         })
       })
     )
@@ -88,7 +89,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const {createTypes} = actions
+  const { createTypes } = actions
   const typeDefs = `
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
@@ -105,4 +106,3 @@ exports.createSchemaCustomization = ({ actions }) => {
   `
   createTypes(typeDefs)
 }
-
