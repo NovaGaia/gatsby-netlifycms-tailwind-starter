@@ -1,18 +1,18 @@
 ---
 templateKey: index-page
-title: Connecting People with Nature
-image: /img/chuttersnap-ifmqouokaoa-unsplash.jpg
-heading: Connecting People with Nature*
-subheading: "*A Gatsby v4 starter template set up with Netlify CMS and Tailwind CSS."
+title: Reconnectons avec la nature
+image: /img/thomas-lambert-ehlh-wn7f7i-unsplash.jpg
+heading: Reconnectons avec la nature*
+subheading: "* Un modèle de site utilisant GatsbyV4 utilisant NetlifyCMS et Tailwind CSS"
 about:
-  heading: Who we are
-  description: "Our team of architects, gardeners and enginners is working with
-    clients all over the world to transform urban spaces with the best nature
-    provides."
+  heading: Qui sommes nous ?
+  description: |-
+    Une agence développant des sites éco-concus et performant !
+    Ce qui est bon pour la planète et votre entreprise/micro-entreprise.
   image:
-    image: /img/leon-tho1_oukbg0-unsplash.jpg
-    alt: people working in agency
+    image: /img/imagewebconfeglantine.jpg
+    alt: L'agence
   button:
     url: /about
-    label: Find out more
+    label: En apprendre plus
 ---
