@@ -31,7 +31,7 @@ const ProjectPage = ({ data, pageContext }) => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  className="w-5 h-5"
+                  className="w-4 h-4"
                 >
                   <path
                     fillRule="evenodd"
@@ -39,9 +39,9 @@ const ProjectPage = ({ data, pageContext }) => {
                     clipRule="evenodd"
                   />
                 </svg>
-                Next
+                <span className="mt-1 p-0 leading-none">Next</span>
               </div>
-              <p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">
+              <p className="mt-4 uppercase text-primary-accent font-bold text-xs tracking-wide">
                 {previous.frontmatter.location}
               </p>
               <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
@@ -55,12 +55,12 @@ const ProjectPage = ({ data, pageContext }) => {
             <div className="mt-6 sm:mt-0">
               <Link to={next.fields.slug} className="group sm:text-right">
                 <div className="flex items-center gap-x-2 text-gray-500 sm:justify-end">
-                  Previous
+                  <span className="mt-1 p-0 leading-none">Previous</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                   >
                     <path
                       fillRule="evenodd"
@@ -69,7 +69,7 @@ const ProjectPage = ({ data, pageContext }) => {
                     />
                   </svg>
                 </div>
-                <p className="mt-4 uppercase text-green-600 font-bold text-xs tracking-wide">
+                <p className="mt-4 uppercase text-primary-accent font-bold text-xs tracking-wide">
                   {next.frontmatter.location}
                 </p>
                 <h3 className="font-bold text-lg text-gray-700 group-hover:underline">

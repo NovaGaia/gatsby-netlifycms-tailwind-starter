@@ -19,7 +19,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
           netlify-honeypot="bot-field"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <p class="hidden">
+          <p className="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
@@ -38,7 +38,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                   name="first-name"
                   id="first-name"
                   autoComplete="given-name"
-                  className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 focus:ring-ringprimary-neutral focus:border-ringprimary-neutral block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
 
@@ -54,7 +54,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                   name="last-name"
                   id="last-name"
                   autoComplete="family-name"
-                  className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 focus:ring-ringprimary-neutral focus:border-ringprimary-neutral block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
 
@@ -70,7 +70,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                   name="email-address"
                   id="email-address"
                   autoComplete="email"
-                  className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 focus:ring-ringprimary-neutral focus:border-ringprimary-neutral block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
 
@@ -89,7 +89,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                   name="phone"
                   id="phone"
                   autoComplete="email"
-                  className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  className="mt-1 focus:ring-ringprimary-neutral focus:border-ringprimary-neutral block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
 
@@ -110,7 +110,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                     id="message"
                     name="message"
                     rows={3}
-                    className="shadow-sm focus:ring-green-500 focus:border-green-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+                    className="shadow-sm focus:ring-ringprimary-neutral focus:border-ringprimary-neutral mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                     defaultValue={''}
                   />
                 </div>
@@ -121,7 +121,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
           <div className="mt-2 py-3 text-right">
             <button
               type="submit"
-              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-btdark-text bg-btdark-neutral hover:bg-btdark-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ringprimary-neutral"
             >
               Submit
             </button>
@@ -130,7 +130,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
       </TextImageSplit>
 
       <TextImageSplit image={office.image} imageLeft={true}>
-        <p className="text-green-700 font-semibold tracking-wide">
+        <p className="text-primary font-semibold tracking-wide">
           {office.tagline}
         </p>
         <SectionHeading>{office.location}</SectionHeading>

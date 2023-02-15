@@ -24,7 +24,7 @@ function AboutPageTemplate({ heading, subheading, html, team }) {
                   <p className="mt-2 text-gray-800 font-semibold">
                     {member.name}
                   </p>
-                  <p className="mt-0 text-green-700">{member.title}</p>
+                  <p className="mt-0 text-primary">{member.title}</p>
                 </div>
               )
             })}

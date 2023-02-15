@@ -7,11 +7,55 @@ module.exports = {
     './src/components/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {
-      colors: {
-        green: colors.emerald,
-        lime: colors.lime,
+    colors: {
+      gray: colors.gray,
+      white: {
+        DEFAULT: 'rgb(var(--color-white) / <alpha-value>)',
       },
+      primary: {
+        // green-700
+        DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+        light: 'rgb(var(--color-primary--light) / <alpha-value>)',
+        accent: 'rgb(var(--color-primary--accent) / <alpha-value>)',
+        'inside--text':
+          'rgb(var(--color-primary--inside--text) / <alpha-value>)',
+        'inside--bg': 'rgb(var(--color-primary--inside--bg) / <alpha-value>)',
+        'inside--bg-active':
+          'rgb(var(--color-primary--inside--bg-active) / <alpha-value>)',
+      },
+      btprimary: {
+        neutral: 'rgb(var(--color-btprimary-bg--neutral) / <alpha-value>)',
+        hover: 'rgb(var(--color-btprimary-bg--hover) / <alpha-value>)',
+        text: 'rgb(var(--color-btprimary-text--neutral) / <alpha-value>)',
+      },
+      ringprimary: {
+        neutral: 'rgb(var(--color-ringprimary--neutral) / <alpha-value>)',
+        dark: 'rgb(var(--color-ringprimary--dark) / <alpha-value>)',
+      },
+      btsecondary: {
+        neutral: 'rgb(var(--color-btsecondary-bg--neutral) / <alpha-value>)',
+        hover: 'rgb(var(--color-btsecondary-bg--hover) / <alpha-value>)',
+        text: 'rgb(var(--color-btsecondary-text--neutral) / <alpha-value>)',
+      },
+      btdark: {
+        neutral: 'rgb(var(--color-btdark-bg--neutral) / <alpha-value>)',
+        hover: 'rgb(var(--color-btdark-bg--hover) / <alpha-value>)',
+        text: 'rgb(var(--color-btdark-text--neutral) / <alpha-value>)',
+      },
+    },
+    extend: {
+      typography: ({ theme }) => ({
+        green: {
+          css: {
+            a: {
+                color: 'rgb(var(--color-primary--accent))',
+                '&:hover': {
+                    color: 'rgb(var(--color-primary--light))',
+                },
+            },
+          },
+        },
+      }),
       spacing: {
         '1/2': '50%',
         '1/3': '33.33333%',

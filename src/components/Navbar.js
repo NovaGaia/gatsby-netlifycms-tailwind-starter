@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import MyImage from './MyImage'
 
 const NAVLINK_CLASSES =
-  'my-1 py-3 px-3 text-center font-medium text-gray-600 border-b-4 border-white hover:border-green-700 md:mx-2 md:my-0'
+  'my-1 py-3 px-3 text-center font-medium text-gray-600 border-b-4 border-white hover:border-primary md:mx-2 md:my-0'
 
 // this link will be active when itself or deeper routes
 // are current
@@ -14,7 +14,7 @@ const NAVLINK_CLASSES =
 // the same as the href.
 const isActive = ({ isCurrent }) => {
   return isCurrent
-    ? { className: NAVLINK_CLASSES + ' text-green-700 border-green-700' }
+    ? { className: NAVLINK_CLASSES + ' text-primary border-primary' }
     : {}
 }
 
@@ -32,7 +32,7 @@ const ExactNavLink = ({ children, ...rest }) => {
 // are current
 const isPartiallyActive = ({ isPartiallyCurrent }) => {
   return isPartiallyCurrent
-    ? { className: NAVLINK_CLASSES + ' text-green-700 border-green-700' }
+    ? { className: NAVLINK_CLASSES + ' text-primary border-primary' }
     : {}
 }
 

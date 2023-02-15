@@ -16,11 +16,11 @@ const IndexPageTemplate = ({
   return (
     <div>
       {/* Header */}
-      <div className="relative bg-green-700 overflow-hidden">
+      <div className="relative bg-primary overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pt-24 pb-12 bg-green-700 sm:pt-28 sm:pb-14 md:pt-32 md:pb-16 lg:w-1/2 lg:pt-44 lg:pb-24 xl:pt-48 xl:pb-32">
+          <div className="relative z-10 pt-24 pb-12 bg-primary sm:pt-28 sm:pb-14 md:pt-32 md:pb-16 lg:w-1/2 lg:pt-44 lg:pb-24 xl:pt-48 xl:pb-32">
             <svg
-              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-green-700 transform translate-x-1/2"
+              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-primary transform translate-x-1/2"
               fill="currentColor"
               width={`192px`}
               height={`100%`}
@@ -36,7 +36,7 @@ const IndexPageTemplate = ({
                 <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
                   {heading}
                 </h1>
-                <p className="mt-2 text-green-100 sm:mt-4 lg:mt-6 lg:text-xl">
+                <p className="mt-2 text-primary-inside--text sm:mt-4 lg:mt-6 lg:text-xl">
                   {subheading}
                 </p>
                 <PrimaryButton to="/contact" className="mt-6 lg:mt-10">
@@ -61,7 +61,7 @@ const IndexPageTemplate = ({
         <div className="flex justify-between items-baseline">
           <SectionHeading>Our projects from all over the world</SectionHeading>
           <Link
-            className="text-green-700 underline hover:text-green-800"
+            className="text-primary-light underline hover:text-primary"
             to="/projects"
           >
             View all

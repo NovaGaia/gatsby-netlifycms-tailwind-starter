@@ -24,7 +24,7 @@ const Footer = ({ siteBaseline, logo, copyright, navigation }) => {
               {navigation?.map((column, key) => {
                 return (
                   <div key={key}>
-                    <h3 className="text-gray-700 uppercase dark:text-white">
+                    <h3 className="text-gray-700 font-semibold uppercase dark:text-white">
                       {column.name}
                     </h3>
                     {column?.links?.map((link, subKey) => {
