@@ -14,10 +14,10 @@ const getImageSize = (setImageDimensions, img, height) => {
   }
 }
 
-function MyImage({ image }) {
+function MyImage({ image, height = 40 }) {
   const [imageDimensions, setImageDimensions] = useState({})
   useEffect(() => {
-    getImageSize(setImageDimensions, image?.image)
+    getImageSize(setImageDimensions, image?.image, height)
   }, [])
   return (
     <>

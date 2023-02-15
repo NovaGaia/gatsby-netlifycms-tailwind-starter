@@ -48,9 +48,7 @@ const Layout = ({ children }) => {
           }`}
         />
         {/* Navbar height will be h-12 sm:h-14 md:h-18 */}
-        <SkipNavContent className="mb-auto">
-          {children}
-        </SkipNavContent>
+        <SkipNavContent className="mb-auto">{children}</SkipNavContent>
         <Footer
           navigation={navSecondary}
           siteBaseline={siteBaseline}
