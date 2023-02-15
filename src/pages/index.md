@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Reconnectons avec la nature
 image: /img/thomas-lambert-ehlh-wn7f7i-unsplash.jpg
-heading: Reconnectons avec la nature*
-subheading: "* Un modèle de site utilisant GatsbyV4 utilisant NetlifyCMS et Tailwind CSS"
+heading: "Reconnectons avec la nature* "
+subheading: "*Un modèle de site sous Gatsby V4 utilisant NetlifyCMS et Tailwind CSS"
 about:
   heading: Qui sommes nous ?
   description: |-
