@@ -10,6 +10,7 @@ module.exports = {
     repoUrl: `https://github.com/NovaGaia/gatsby-netlifycms-tailwind-starter`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
