@@ -7,9 +7,9 @@ team:
   - name: Bernard Ludvig
     image: /img/bannon-morrissy-rxiav5lc-ww-unsplash.jpg
     title: Founder / CEO
-  - name: Boris Antonox
+  - name: Lucie Antonox
     title: Développeur
-    image: /img/jakob-owens-lkmjcgdzlvs-unsplash.jpg
+    image: /img/edward-cisneros-_h6wpor9mjs-unsplash.jpg
   - name: Max Morf
     title: Design
     image: /img/ian-dooley-d1upkifd04a-unsplash.jpg
