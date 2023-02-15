@@ -3,8 +3,8 @@ title: UrbanGarden
 description: Transforming and enriching our urban environments with green living spaces
 showGitHubLink: true
 seoPrincipal:
-  title: UrbanGarden
-  description: Transforming and enriching our urban environments with green living spaces
+  title: NovaGarden
+  description: Eco-designing a sustainable web for a happy digital future
 logoHeader:
   alt: Logo top
   image: /img/logoipsum-285.svg
@@ -15,8 +15,7 @@ logoFooter:
   image: /img/logoipsum-285.svg
   width: 40px
   height: 40px
-siteBaseline: "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  Reiciendis, nisi! Id. "
+siteBaseline: Eco-designing a sustainable web for a happy digital future
 copyright:
   label: © NovaGaïa 2023 - All rights reserved
   url: https://novagaia.fr
