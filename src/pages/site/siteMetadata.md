@@ -4,7 +4,7 @@ description: Transforming and enriching our urban environments with green living
 showGitHubLink: true
 seoPrincipal:
   title: NovaGarden
-  description: Eco-concevons un web sustainable pour un avenir heureux et numérique
+  description: Eco-concevons un web soutenable pour un avenir heureux et numérique
 logoHeader:
   alt: Logo top
   image: /img/logoipsum-285.svg
@@ -15,7 +15,7 @@ logoFooter:
   image: /img/logoipsum-285.svg
   width: 40px
   height: 40px
-siteBaseline: Eco-concevons un web sustainable pour un avenir heureux et numérique
+siteBaseline: Eco-concevons un web soutenable pour un avenir heureux et numérique
 copyright:
   label: © NovaGaïa 2023 - All rights reserved
   url: https://novagaia.fr
