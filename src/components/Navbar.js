@@ -1,7 +1,8 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Link } from 'gatsby'
+import MyImage from './MyImage'
 
 const NAVLINK_CLASSES =
   'my-1 py-3 px-3 text-center font-medium text-gray-600 border-b-4 border-white hover:border-green-700 md:mx-2 md:my-0'
@@ -53,20 +54,7 @@ const Navbar = ({ className, navigation, logo, repoURL, showGitHubLink }) => {
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between py-2">
           <Link className="flex items-center gap-1" to="/">
-            {logo &&
-              (getImage(logo?.image) ? (
-                <GatsbyImage
-                  alt={logo?.alt}
-                  className="h-8 sm:h-10"
-                  image={getImage(logo?.image)}
-                />
-              ) : (
-                <img
-                  src={logo?.image?.publicURL}
-                  alt={logo?.alt}
-                  className="h-8 sm:h-10"
-                />
-              ))}
+            <MyImage image={logo} />
           </Link>
 
           {/* Mobile menu button */}

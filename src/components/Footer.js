@@ -1,10 +1,8 @@
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
 import { Link } from 'gatsby'
+import MyImage from './MyImage'
 import React from 'react'
 
 const Footer = ({ siteBaseline, logo, copyright, navigation }) => {
-  console.log(`navigation`, navigation)
   return (
     <footer className="bg-gray-100">
       <div className="max-w-7xl px-4 py-4 mx-auto sm:px-6 lg:px-8">
@@ -12,20 +10,7 @@ const Footer = ({ siteBaseline, logo, copyright, navigation }) => {
           <div className="w-full -mx-4 sm:-mx-6 lg:-mx-8 lg:w-2/5">
             <div className="px-4 sm:px-6 lg:px-8">
               <Link className="flex items-center gap-1" to="/">
-                {logo &&
-                  (getImage(logo?.image) ? (
-                    <GatsbyImage
-                      alt={logo?.alt}
-                      className="h-8 sm:h-10"
-                      image={getImage(logo?.image)}
-                    />
-                  ) : (
-                    <img
-                      src={logo?.image?.publicURL}
-                      alt={logo?.alt}
-                      className="h-8 sm:h-10"
-                    />
-                  ))}
+                <MyImage image={logo} />
               </Link>
 
               <p className="max-w-md mt-2 text-gray-600 dark:text-gray-400">
@@ -38,15 +23,16 @@ const Footer = ({ siteBaseline, logo, copyright, navigation }) => {
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
               {navigation?.map((column, key) => {
                 return (
-                  <div>
-                    <h3
-                      className="text-gray-700 uppercase dark:text-white"
-                      key={key}
-                    >
+                  <div key={key}>
+                    <h3 className="text-gray-700 uppercase dark:text-white">
                       {column.name}
                     </h3>
                     {column?.links?.map((link, subKey) => {
-                      if (link?.url.startsWith('http')) {
+                      if (
+                        link?.url.startsWith('http') ||
+                        link?.url.startsWith('mailto') ||
+                        link?.url.startsWith('tel')
+                      ) {
                         return (
                           <a
                             href={link?.url}
