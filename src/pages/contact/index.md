@@ -1,23 +1,23 @@
 ---
 templateKey: contact-page
 title: Contact
-heading: Contact us
-subheading: Visit us in our offices or simply drop us a message
+heading: Nous contacter
+subheading: Rendez-nous visite dans nos bureaux ou envoyez-nous simplement un message.
 contactform:
-  heading: Let's work together!
-  description: We'd love to hear from you. Send us a message using the form below,
-    or email us.
-  image: /img/copernico-p_kicqcom4s-unsplash-1-.jpg
+  heading: Travaillons ensemble !
+  description: Nous aimerions avoir de vos nouvelles. Envoyez-nous un message en
+    utilisant le formulaire ci-dessous, ou envoyez-nous un courriel.
+  image: /img/annie-spratt-qckxruozjrg-unsplash.jpg
 office:
-  tagline: Our Office
-  location: London Spitalfield
+  tagline: Notre bureau
+  location: Nogent sur marne
   address: |-
     7﻿ rue Pierre Brossolette\
     9﻿4130 Nogent sur Marne\
     France
   phone: |-
-    Email: fake@urbangarden.com\
-    Phone: 01234 567 891\
-    Monday to Friday 9-6pm GMT.
-  image: /img/klaudia-piaskowska-g3lrnieizq4-unsplash.jpg
+    Email: contact@novagaia.fr\
+    Phone: +33 6 16 19 22 73\
+    Du lundi au vendredi de 9 à 18 heures GMT.
+  image: /img/john-towner-hf4ap1-ef40-unsplash.jpg
 ---
