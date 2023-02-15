@@ -1,30 +1,30 @@
 ---
 navPrimary:
-  - name: Home
-    title: Back Home
+  - name: Accueil
+    title: Retour à l'accueil
     url: /
-  - name: Project
-    title: See our projects
+  - name: Projets
+    title: Venez voir nos projets
     url: /projects
-  - name: About
-    title: See our story
+  - name: A propos
+    title: Venez nous découvrir
     url: /about
   - name: Contact
-    title: You want to reach us ?
+    title: Vous souhaitez entrer en contact ?
     url: /contact
 navSecondary:
-  - name: About
+  - name: A propos
     links:
       - name: Company
         title: Company
-        url: '#'
+        url: "#"
       - name: Community
         title: Community
-        url: '#'
+        url: "#"
       - name: Careers
         title: Careers
-        url: '#'
-  - name: Products
+        url: "#"
+  - name: Stack
     links:
       - name: Gatsby
         title: Gatsby
