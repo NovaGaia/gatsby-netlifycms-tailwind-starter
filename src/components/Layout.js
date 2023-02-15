@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { SkipNavContent, SkipNavLink } from './SkipNav'
+
 import Footer from './Footer'
 import { Helmet } from 'react-helmet'
 import Navbar from './Navbar'
@@ -32,6 +34,7 @@ const Layout = ({ children }) => {
         </title>
         <meta name="description" content={description} />
       </Helmet>
+      <SkipNavLink />
       <div className="flex flex-col h-screen justify-between">
         <Navbar
           logo={logoHeader}
@@ -45,7 +48,9 @@ const Layout = ({ children }) => {
           }`}
         />
         {/* Navbar height will be h-12 sm:h-14 md:h-18 */}
-        <main className="mb-auto">{children}</main>
+        <SkipNavContent className="mb-auto">
+          {children}
+        </SkipNavContent>
         <Footer
           navigation={navSecondary}
           siteBaseline={siteBaseline}
