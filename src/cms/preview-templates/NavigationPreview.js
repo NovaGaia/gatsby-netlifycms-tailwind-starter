@@ -1,7 +1,6 @@
 import React from 'react'
 
 const DisplayLink = ({ link, key }) => {
-  console.log(link)
   return (
     <li
       key={key}
