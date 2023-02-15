@@ -103,5 +103,9 @@ I've you find a solution that works, please let me know or submit a pull request
 
 ## 🛠 Todo
 
-- Gatsby V5
-- Use Gatsby V4/V5 <Head> instead of Helmet
+- [x] Gatsby V4
+- [ ] Remove `gatsby-remark-relative-images` if possible
+- [ ] Gatsby V5
+- [ ] Use Gatsby V4/V5 <Head> instead of Helmet
+- [ ] Page builder
+- [ ] Blog

@@ -8,6 +8,7 @@ contactform:
   description: Nous aimerions avoir de vos nouvelles. Envoyez-nous un message en
     utilisant le formulaire ci-dessous, ou envoyez-nous un courriel.
   image: /img/annie-spratt-qckxruozjrg-unsplash.jpg
+ctaLabel: Envoyer
 office:
   tagline: Notre bureau
   location: Nogent sur marne

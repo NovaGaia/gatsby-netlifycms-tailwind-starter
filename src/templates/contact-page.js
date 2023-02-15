@@ -11,6 +11,7 @@ function ContactPage({ data }) {
       <MyHelmet title={fm.title} description={fm.subheading} />
       <ContactPageTemplate
         heading={fm.heading}
+        ctaLabel={fm.ctaLabel}
         subheading={fm.subheading}
         contactform={fm.contactform}
         office={fm.office}
@@ -48,6 +49,7 @@ export const contactPageQuery = graphql`
             }
           }
         }
+        ctaLabel
       }
     }
   }

@@ -26,6 +26,7 @@ const ContactPagePreview = ({ entry, getAsset }) => {
         subheading={data.subheading}
         contactform={contactform}
         office={office}
+        ctaLabel={data.ctaLabel}
       />
     )
   } else {

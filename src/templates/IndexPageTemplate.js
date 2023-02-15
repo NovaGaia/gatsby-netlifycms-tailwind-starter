@@ -10,6 +10,9 @@ const IndexPageTemplate = ({
   heading,
   subheading,
   image,
+  ctaLabel,
+  projectHeading,
+  allProjectsLabel,
   posts = [],
   about,
 }) => {
@@ -40,7 +43,7 @@ const IndexPageTemplate = ({
                   {subheading}
                 </p>
                 <PrimaryButton to="/contact" className="mt-6 lg:mt-10">
-                  Contact us
+                  {ctaLabel}
                 </PrimaryButton>
               </div>
             </div>
@@ -59,12 +62,12 @@ const IndexPageTemplate = ({
       {/* Featured projects */}
       <Container>
         <div className="flex justify-between items-baseline">
-          <SectionHeading>Our projects from all over the world</SectionHeading>
+          <SectionHeading>{projectHeading}</SectionHeading>
           <Link
             className="text-primary-light underline hover:text-primary dark:text-primary-accent"
             to="/projects"
           >
-            View all
+            {allProjectsLabel}
           </Link>
         </div>
         <div className="mt-8">

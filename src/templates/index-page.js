@@ -15,6 +15,9 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         heading={fm.heading}
         subheading={fm.subheading}
+        ctaLabel={fm.ctaLabel}
+        projectHeading={fm.projectHeading}
+        allProjectsLabel={fm.allProjectsLabel}
         image={fm.image}
         posts={posts}
         about={fm.about}
@@ -38,6 +41,9 @@ export const indexPageQuery = graphql`
         }
         heading
         subheading
+        ctaLabel
+        projectHeading
+        allProjectsLabel
         about {
           description
           heading

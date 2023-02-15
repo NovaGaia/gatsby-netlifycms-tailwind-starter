@@ -4,7 +4,13 @@ import Header from '../components/Header'
 import Mardown from 'react-markdown'
 import React from 'react'
 
-function ContactPageTemplate({ heading, subheading, contactform, office }) {
+function ContactPageTemplate({
+  heading,
+  subheading,
+  contactform,
+  office,
+  ctaLabel,
+}) {
   return (
     <div>
       <Header heading={heading} subheading={subheading} />
@@ -127,7 +133,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
               type="submit"
               className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-btdark-text bg-btdark-neutral hover:bg-btdark-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ringprimary-neutral"
             >
-              Submit
+              {ctaLabel}
             </button>
           </div>
         </form>

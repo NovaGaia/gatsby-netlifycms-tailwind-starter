@@ -59,6 +59,13 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
+          - { label: 'CTA Label', name: ctaLabel, widget: string }
+          - { label: 'Project Heading', name: projectHeading, widget: string }
+          - {
+              label: 'View All Projects',
+              name: allProjectsLabel,
+              widget: string,
+            }
           # - { label: "Body", name: "body", widget: "markdown" }
           # - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
           # - {label: Description, name: description, widget: string}
@@ -157,6 +164,7 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
+          - { label: 'CTA Label', name: 'ctaLabel', widget: 'string' }
           - {
               label: Office,
               name: office,
@@ -177,7 +185,12 @@ collections:
         label: 'Site configuration'
         name: 'configuration'
         fields:
-          - { label: Display GitHub Repo Link, name: showGitHubLink, widget: boolean, required: true}
+          - {
+              label: Display GitHub Repo Link,
+              name: showGitHubLink,
+              widget: boolean,
+              required: true,
+            }
           - {
               label: SEO,
               name: seoPrincipal,
@@ -185,7 +198,11 @@ collections:
               fields:
                 [
                   { label: 'Site title', name: 'title', widget: 'string' },
-                  { label: 'Site Description', name: 'description', widget: 'text' },
+                  {
+                    label: 'Site Description',
+                    name: 'description',
+                    widget: 'text',
+                  },
                 ],
             }
           - {
@@ -208,20 +225,49 @@ collections:
                 [
                   { label: Image, name: image, widget: image, required: false },
                   { label: Alt, name: alt, widget: string, required: false },
-                  { label: Width, name: width, widget: string, required: false },
-                  { label: Height, name: height, widget: string, required: false },
+                  {
+                    label: Width,
+                    name: width,
+                    widget: string,
+                    required: false,
+                  },
+                  {
+                    label: Height,
+                    name: height,
+                    widget: string,
+                    required: false,
+                  },
                 ],
             }
-          - { label: 'Site baseline (Footer)', name: 'siteBaseline', widget: 'text' }
+          - {
+              label: 'Site baseline (Footer)',
+              name: 'siteBaseline',
+              widget: 'text',
+            }
           - {
               label: Site copyright,
               name: copyright,
               widget: object,
               fields:
                 [
-                  { label: 'Text', name: 'label', widget: 'string', hint: '© NovaGaïa 2020 - All rights reserved' },
-                  { label: 'Title', name: 'title', widget: 'string', hint: 'Consulter le site NovaGaïa' },
-                  { label: 'URL', name: 'url', widget: 'string', hint: 'https://novagaia.fr' },
+                  {
+                    label: 'Text',
+                    name: 'label',
+                    widget: 'string',
+                    hint: '© NovaGaïa 2020 - All rights reserved',
+                  },
+                  {
+                    label: 'Title',
+                    name: 'title',
+                    widget: 'string',
+                    hint: 'Consulter le site NovaGaïa',
+                  },
+                  {
+                    label: 'URL',
+                    name: 'url',
+                    widget: 'string',
+                    hint: 'https://novagaia.fr',
+                  },
                 ],
             }
       - file: 'src/pages/site/navigations.md'
@@ -246,18 +292,19 @@ collections:
               name: navSecondary,
               widget: list,
               fields:
-                [{ label: Label, name: name, widget: string },
-                {
-                  label: Links,
-                  label_singular: link,
-                  name: links,
-                  widget: list,
-                  fields:
-                    
-                    [
-                      { label: Label, name: name, widget: string },
-                      { label: Title, name: title, widget: string },
-                      { label: URL, name: url, widget: string },
-                    ],
-                }]
+                [
+                  { label: Label, name: name, widget: string },
+                  {
+                    label: Links,
+                    label_singular: link,
+                    name: links,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Label, name: name, widget: string },
+                        { label: Title, name: title, widget: string },
+                        { label: URL, name: url, widget: string },
+                      ],
+                  },
+                ],
             }
