@@ -11,7 +11,9 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
 
       <TextImageSplit image={contactform.image}>
         <SectionHeading>{contactform.heading}</SectionHeading>
-        <p className="mt-6 text-gray-500 text-lg">{contactform.description}</p>
+        <p className="mt-6 text-gray-500 text-lg dark:text-gray-300">
+          {contactform.description}
+        </p>
         <form
           name="contact"
           method="POST"
@@ -29,7 +31,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="first-name"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
                   First name
                 </label>
@@ -45,7 +47,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="last-name"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
                   Last name
                 </label>
@@ -61,7 +63,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="email-address"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
                   Email
                 </label>
@@ -78,11 +80,13 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                 <div className="flex justify-between">
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                   >
                     Phone
                   </label>
-                  <span className="text-gray-500 text-sm">Optional</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">
+                    Optional
+                  </span>
                 </div>
                 <input
                   type="text"
@@ -97,11 +101,11 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                 <div className="flex justify-between">
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                   >
                     Message
                   </label>
-                  <span className="text-gray-500 text-sm">
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">
                     Max. 500 characters
                   </span>
                 </div>
@@ -130,11 +134,11 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
       </TextImageSplit>
 
       <TextImageSplit image={office.image} imageLeft={true}>
-        <p className="text-primary font-semibold tracking-wide">
+        <p className="text-primary font-semibold tracking-wide dark:text-primary-accent">
           {office.tagline}
         </p>
         <SectionHeading>{office.location}</SectionHeading>
-        <div className="mt-6 sm:flex sm:flex-row text-gray-500">
+        <div className="mt-6 sm:flex sm:flex-row text-gray-500 dark:text-gray-300">
           <div className="sm:w-1/2">
             <Mardown>{office.address}</Mardown>
           </div>

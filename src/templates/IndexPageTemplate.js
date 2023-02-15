@@ -61,7 +61,7 @@ const IndexPageTemplate = ({
         <div className="flex justify-between items-baseline">
           <SectionHeading>Our projects from all over the world</SectionHeading>
           <Link
-            className="text-primary-light underline hover:text-primary"
+            className="text-primary-light underline hover:text-primary dark:text-primary-accent"
             to="/projects"
           >
             View all

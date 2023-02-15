@@ -1,11 +1,10 @@
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { Link } from 'gatsby'
 import MyImage from './MyImage'
 
 const NAVLINK_CLASSES =
-  'my-1 py-3 px-3 text-center font-medium text-gray-600 border-b-4 border-white hover:border-primary md:mx-2 md:my-0'
+  'my-1 py-3 px-3 text-center font-medium text-gray-600 border-b-4 border-transparent hover:border-primary md:mx-2 md:my-0 dark:text-gray-200 dark:hover:border-primary-accent'
 
 // this link will be active when itself or deeper routes
 // are current
@@ -14,7 +13,11 @@ const NAVLINK_CLASSES =
 // the same as the href.
 const isActive = ({ isCurrent }) => {
   return isCurrent
-    ? { className: NAVLINK_CLASSES + ' text-primary border-primary' }
+    ? {
+        className:
+          NAVLINK_CLASSES +
+          ' text-primary border-primary dark:border-primary-light',
+      }
     : {}
 }
 
@@ -32,7 +35,11 @@ const ExactNavLink = ({ children, ...rest }) => {
 // are current
 const isPartiallyActive = ({ isPartiallyCurrent }) => {
   return isPartiallyCurrent
-    ? { className: NAVLINK_CLASSES + ' text-primary border-primary' }
+    ? {
+        className:
+          NAVLINK_CLASSES +
+          ' text-primary border-primary dark:border-primary-light',
+      }
     : {}
 }
 
@@ -50,18 +57,23 @@ const Navbar = ({ className, navigation, logo, repoURL, showGitHubLink }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className={`fixed top-0 w-full z-30 bg-white shadow-xl ${className}`}>
+    <nav
+      className={`fixed top-0 w-full z-30 bg-white shadow-xl dark:bg-gray-800 ${className}`}
+    >
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between py-2">
           <Link className="flex items-center gap-1" to="/">
-            <MyImage image={logo} />
+            <MyImage
+              image={logo}
+              className="h-8 sm:h-10 object-scale-down object-left"
+            />
           </Link>
 
           {/* Mobile menu button */}
           <div className="flex md:hidden">
             <button
               type="button"
-              className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+              className="fill-gray-500 dark:fill-gray-200 hover:fill-gray-600 dark:hover:fill-gray-400 focus:outline-none focus:fill-gray-600 dark:focus:fill-gray-400"
               aria-label="toggle menu"
               onClick={() => setMenuOpen(!menuOpen)}
             >

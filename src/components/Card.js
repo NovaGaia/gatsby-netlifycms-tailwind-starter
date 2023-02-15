@@ -15,12 +15,12 @@ function Card({ image, heading, date, location, url, ...rest }) {
         className="rounded-md overflow-hidden"
       />
       <div className="mt-4 flex items-baseline gap-x-2 justify-between">
-        <span className="uppercase text-primary font-bold text-xs tracking-wide">
+        <span className="uppercase text-primary dark:text-primary-accent font-bold text-xs tracking-wide">
           {location}
         </span>
-        <span className="text-sm text-gray-600">{date}</span>
+        <span className="text-sm text-gray-600 dark:text-gray-400">{date}</span>
       </div>
-      <h3 className="mt-1 font-bold text-lg group-hover:underline">
+      <h3 className="mt-1 font-bold text-lg group-hover:underline text-gray-600 dark:text-gray-300">
         {heading}
       </h3>
     </Link>

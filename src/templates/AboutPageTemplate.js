@@ -21,10 +21,12 @@ function AboutPageTemplate({ heading, subheading, html, team }) {
                     image={member.image}
                     alt={member.name}
                   />
-                  <p className="mt-2 text-gray-800 font-semibold">
+                  <p className="mt-2 text-gray-800 dark:text-gray-300 font-semibold">
                     {member.name}
                   </p>
-                  <p className="mt-0 text-primary">{member.title}</p>
+                  <p className="mt-0 text-primary dark:text-primary-accent">
+                    {member.title}
+                  </p>
                 </div>
               )
             })}

@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     colors: {
       gray: colors.gray,
+      transparent: colors.transparent,
       white: {
         DEFAULT: 'rgb(var(--color-white) / <alpha-value>)',
       },
@@ -47,11 +48,13 @@ module.exports = {
       typography: ({ theme }) => ({
         green: {
           css: {
+            '--tw-prose-body': theme('colors.gray[300]'),
+            '--tw-prose-headings': theme('colors.gray[300]'),
             a: {
-                color: 'rgb(var(--color-primary--accent))',
-                '&:hover': {
-                    color: 'rgb(var(--color-primary--light))',
-                },
+              color: 'rgb(var(--color-primary--accent))',
+              '&:hover': {
+                color: 'rgb(var(--color-primary--light))',
+              },
             },
           },
         },

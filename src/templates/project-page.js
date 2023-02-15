@@ -26,7 +26,7 @@ const ProjectPage = ({ data, pageContext }) => {
         <div className="sm:flex sm:justify-between sm:items-center sm:gap-4 border-t py-4">
           {previous && previous.frontmatter.templateKey === 'project-page' ? (
             <Link to={previous.fields.slug} className="group">
-              <div className="flex items-center gap-x-2 text-gray-500">
+              <div className="flex items-center gap-x-2 text-gray-500 dark:text-gray-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -41,10 +41,10 @@ const ProjectPage = ({ data, pageContext }) => {
                 </svg>
                 <span className="mt-1 p-0 leading-none">Next</span>
               </div>
-              <p className="mt-4 uppercase text-primary-accent font-bold text-xs tracking-wide">
+              <p className="mt-4 uppercase text-primary-accent dark:text-primary-accent font-bold text-xs tracking-wide">
                 {previous.frontmatter.location}
               </p>
-              <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
+              <h3 className="font-bold text-lg text-gray-700 dark:text-gray-400 group-hover:underline">
                 {previous.frontmatter.title}
               </h3>
             </Link>
@@ -54,7 +54,7 @@ const ProjectPage = ({ data, pageContext }) => {
           {next && next.frontmatter.templateKey === 'project-page' ? (
             <div className="mt-6 sm:mt-0">
               <Link to={next.fields.slug} className="group sm:text-right">
-                <div className="flex items-center gap-x-2 text-gray-500 sm:justify-end">
+                <div className="flex items-center gap-x-2 text-gray-500 sm:justify-end dark:text-gray-400">
                   <span className="mt-1 p-0 leading-none">Previous</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const ProjectPage = ({ data, pageContext }) => {
                 <p className="mt-4 uppercase text-primary-accent font-bold text-xs tracking-wide">
                   {next.frontmatter.location}
                 </p>
-                <h3 className="font-bold text-lg text-gray-700 group-hover:underline">
+                <h3 className="font-bold text-lg text-gray-700 dark:text-gray-400 group-hover:underline">
                   {next.frontmatter.title}
                 </h3>
               </Link>

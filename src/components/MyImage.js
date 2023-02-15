@@ -14,7 +14,7 @@ const getImageSize = (setImageDimensions, img, height) => {
   }
 }
 
-function MyImage({ image, height = 40 }) {
+function MyImage({ image, height = 40, ...rest }) {
   const [imageDimensions, setImageDimensions] = useState({})
   useEffect(() => {
     getImageSize(setImageDimensions, image?.image, height)
@@ -25,14 +25,14 @@ function MyImage({ image, height = 40 }) {
         (getImage(image?.image) ? (
           <GatsbyImage
             alt={image?.alt}
-            className="h-8 sm:h-10"
+            {...rest}
             image={getImage(image?.image)}
           />
         ) : (
           <img
             src={image?.image?.publicURL}
             alt={image?.alt}
-            className="h-8 sm:h-10"
+            {...rest}
             height={imageDimensions.height}
             width={imageDimensions.width}
           />
