@@ -1,6 +1,6 @@
 ---
 templateKey: projects-page
 title: Projects
-heading: Our Projects
-subheading: Transforming urban spaces all over the world
+heading: Nos projets
+subheading: Nous éco-concevons un web soutenable
 ---
