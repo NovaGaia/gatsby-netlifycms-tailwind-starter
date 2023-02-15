@@ -18,7 +18,7 @@
     </a>
 </div>
 <h1 align="center">
-  Gatsby v3 - Netlify CMS - Tailwind CSS - Starter
+  Gatsby v4 - Netlify CMS - Tailwind CSS - Starter
 </h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8a3b8c4d-3e0d-4a6e-8761-2fe0eaba8df9/deploy-status)](https://app.netlify.com/sites/rad-lamington-09d0a9/deploys)
@@ -43,9 +43,13 @@ It's a website of a fake urban gardening agency and comprises of a landing page,
 
 ## 🦾 Technologies and Plugins
 
-- ⚛️ **Gatsby v3**
+- ⚛️ **Gatsby v4**
+  - "gatsby": "^4.25.4",
 - ✍️ **Netlify CMS** (incl. Admin live preview for all pages)
+  - "gatsby-plugin-netlify-cms": "^6.25.0"
+  - "netlify-cms-app": "^2.15.72",
 - 💨 **Tailwind CSS** for styling
+  - "tailwindcss": "^3.2.6"
 - 🌃 Performant images with gatsby-plugin-image and gatsby-plugin-sharp
 - ⛑ Site metadata with react-helmet
 - 🗺 Sitemap with gatsby-plugin-sitemap
@@ -60,9 +64,11 @@ Start development environment with
 ```
 $ git clone https://github.com/NovaGaia/gatsby-netlifycms-tailwind-starter.git
 $ cd gatsby-netlifycms-tailwind-starter
-$ npm install
+$ npm install --force
 $ gatsby develop
 ```
+
+> You need ut use `--force` because of `gatsby-remark-relative-images` who use an react older version.
 
 The site is now available at `localhost:8000/`.
 
@@ -88,7 +94,7 @@ I've you find a solution that works, please let me know or submit a pull request
 
 ## 🙌 Credits and thanks
 
-- This template was inspired by [gatsby-starter-netlify-cms](https://github.com/netlify-templates/gatsby-starter-netlify-cms)
+- This template was forked from [gatsby-remark-relative-images](https://github.com/danielmahon/gatsby-remark-relative-images)
 - Taylor Bell for his great course [Build a Blog with React and Markdown using Gatsby](https://egghead.io/courses/build-a-blog-with-react-and-markdown-using-gatsby), available for free on Egghead.io
 - [Merakiui.com](https://merakiui.com/) for the great free Tailwind CSS components
 - [Unsplash](https://unsplash.com/) and photographers for amazing photos
@@ -98,5 +104,4 @@ I've you find a solution that works, please let me know or submit a pull request
 ## 🛠 Todo
 
 - Gatsby V5
-- Change Layout mounting
 - Use Gatsby V4/V5 <Head> instead of Helmet

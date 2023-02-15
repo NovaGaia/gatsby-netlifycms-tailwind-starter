@@ -48,8 +48,10 @@ module.exports = {
       typography: ({ theme }) => ({
         green: {
           css: {
-            '--tw-prose-body': theme('colors.gray[300]'),
-            '--tw-prose-headings': theme('colors.gray[300]'),
+            '--tw-prose-body': theme('colors.gray[600]'),
+            '--tw-prose-invert-body': theme('colors.gray[300]'),
+            '--tw-prose-headings': theme('colors.gray[800]'),
+            '--tw-prose-invert-headings': theme('colors.gray[300]'),
             a: {
               color: 'rgb(var(--color-primary--accent))',
               '&:hover': {

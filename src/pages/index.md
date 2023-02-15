@@ -3,7 +3,7 @@ templateKey: index-page
 title: Connecting People with Nature
 image: /img/chuttersnap-ifmqouokaoa-unsplash.jpg
 heading: Connecting People with Nature*
-subheading: "*A Gatsby v3 starter template set up with Netlify CMS and Tailwind CSS."
+subheading: "*A Gatsby v4 starter template set up with Netlify CMS and Tailwind CSS."
 about:
   heading: Who we are
   description: "Our team of architects, gardeners and enginners is working with
